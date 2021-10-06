@@ -13,9 +13,12 @@ class Body extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     //Ukuran tampilan lebar n tinggi keseluruhan
-    return Background(
-      child: SingleChildScrollView(
-        child: Center(
+    return Stack(
+      children: [
+        Background(
+          child: SizedBox.shrink(),
+        ),
+        Center(
           child: Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -23,7 +26,7 @@ class Body extends StatelessWidget {
               Center(
                 child: Text(
                   "WELCOME TO SEPASANG",
-                  style: TextStyle( 
+                  style: TextStyle(
                       fontWeight: FontWeight.w900,
                       fontSize: 20,
                       color: Colors.purple),
@@ -38,36 +41,40 @@ class Body extends StatelessWidget {
                 ),
               ),
               RoundedButton(
-              text: "LOGIN",
-              press: (){Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return LoginScreen();
-                          },
-                        ),
-                      );},
-            ),
-            SizedBox(height: size.height * 0.02,),
+                text: "LOGIN",
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return LoginScreen();
+                      },
+                    ),
+                  );
+                },
+              ),
+              SizedBox(
+                height: size.height * 0.02,
+              ),
               RoundedButton(
-              text: "SIGNUP",
-              color: PrimaryLightColor,
-              textColor: Colors.purple,
-              press: (){
-                Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return SignupScreen();
-                          },
-                        ),
-                      );
-              },
-            ),
+                text: "SIGNUP",
+                color: PrimaryLightColor,
+                textColor: Colors.purple,
+                press: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return SignupScreen();
+                      },
+                    ),
+                  );
+                },
+              ),
             ],
           ),
         ),
-      ),
+      ],
     );
   }
 }
