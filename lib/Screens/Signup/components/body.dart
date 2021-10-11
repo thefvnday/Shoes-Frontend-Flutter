@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sepasang/Screens/Login/login_screen.dart';
 import 'package:sepasang/Screens/Signup/components/background.dart';
+import 'package:sepasang/Screens/Signup/components/or_divinder.dart';
+import 'package:sepasang/Screens/Signup/components/social_icon.dart';
 import 'package:sepasang/components/already_have_an_account.dart';
 import 'package:sepasang/components/rounded_button.dart';
 import 'package:sepasang/components/rounded_input_field.dart';
@@ -50,15 +53,15 @@ class _BodyState extends State<Body> {
               hintText: "Your Email",
               onChanged: (value) {},
             ),
-             RoundedPasswordField(
-            onshowpassword: (){
-              setState(() {
-                isfisible = !isfisible;
-              });
-            },
-            isfisible: isfisible,
-            onChanged: (value) {},
-          ),
+            RoundedPasswordField(
+              onshowpassword: () {
+                setState(() {
+                  isfisible = !isfisible;
+                });
+              },
+              isfisible: isfisible,
+              onChanged: (value) {},
+            ),
             RoundedButton(
               text: "SIGNUP",
               press: () {},
@@ -77,38 +80,43 @@ class _BodyState extends State<Body> {
               },
             ),
             // OrDevider(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                // Container(
+                //   padding: EdgeInsets.all(2),
+                //   decoration: BoxDecoration(
+                //     border: Border.all(
+                //       width: 2,
+                //       color: PrimaryLightColor,
+                //     ),
+                //     shape: BoxShape.circle,
+                //   ),
+                //   child: Image.asset(
+                //    "assets/images/facebook.png" ,
+                //     width: size.width * 0.08,
+                //   ),
+                // ),
+                SocialIcon(
+                  iconSrc: "assets/images/facebook.png",
+                  press: (){},
+                ),
+                
+                SocialIcon(
+                  iconSrc: "assets/images/google.png",
+                  press: (){},
+                ),
+               
+                SocialIcon(
+                  iconSrc: "assets/images/twitter.png",
+                  press: (){},
+                ),
+
+              ],
+            )
           ],
         ),
       ),
     );
   }
 }
-
-// class OrDevider extends StatelessWidget {
-//   const OrDevider({Key? key}) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     Size size = MediaQuery.of(context).size;
-//     return Container(
-//       width: size.width * 0.8,
-//       child: Row(
-//         children: <Widget>[
-//           Expanded(
-//             child: Devider(
-//               color: Color(0xFFD9D9D9D9),
-//               heigth: 1.5,
-//             ),
-//           ),
-//           Text(
-//             "OR",
-//             style: TextStyle(
-//               color: PrimaryLightColor,
-//               fontWeight: FontWeight.w600,
-//             ),
-//           )
-//         ],
-//       ),
-//     );
-//   }
-// }

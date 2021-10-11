@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sepasang/Screens/Home/home_screen.dart';
 import 'package:sepasang/Screens/Login/components/background.dart';
 import 'package:sepasang/Screens/Signup/signup_screen.dart';
 import 'package:sepasang/components/already_have_an_account.dart';
@@ -55,7 +56,16 @@ class _BodyState extends State<Body> {
           ),
           RoundedButton(
             text: "LOGIN",
-            press: (){},
+            press: (){
+               Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return HomeScreen();
+                      },
+                    ),
+                  );
+            },
           ),
          
           AlreadyHaveAnAccountCheck(
