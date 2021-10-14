@@ -28,21 +28,44 @@ class Body extends StatelessWidget {
               enableInfiniteScroll: true,
               autoPlayAnimationDuration: Duration(milliseconds: 800),
               viewportFraction: 0.8,
+              
               ),
             items:[
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10.0),
-                  image: DecorationImage(
-                    image: AssetImage("assets/images/slide0.jpg"),
-                    fit: BoxFit.cover,
-                 ),
-                ),
+              Slider(
+                sliderImg: 'assets/images/slide0.jpg',
+              ),
+              Slider(
+                sliderImg: 'assets/images/slide1.jpg',
+              ),
+              Slider(
+                sliderImg: 'assets/images/slide2.jpg',
               )
             ]  
           )
         ],
       )),
+    );
+  }
+}
+//Belum bisa di extrac wedget nya
+
+class Slider extends StatelessWidget {
+  final String sliderImg;
+  
+  const Slider({
+    Key? key,required this.sliderImg,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10.0),
+        image: DecorationImage(
+          image: AssetImage(sliderImg),
+          fit: BoxFit.cover,
+       ),
+      ),
     );
   }
 }
