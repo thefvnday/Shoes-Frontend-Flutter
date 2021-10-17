@@ -28,7 +28,6 @@ class Body extends StatelessWidget {
               enableInfiniteScroll: true,
               autoPlayAnimationDuration: Duration(milliseconds: 800),
               viewportFraction: 0.8,
-              
               ),
             items:[
               Slider(
@@ -47,6 +46,9 @@ class Body extends StatelessWidget {
     );
   }
 }
+
+
+
 //Belum bisa di extrac wedget nya
 
 class Slider extends StatelessWidget {

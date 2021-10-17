@@ -16,7 +16,7 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
       children: <Widget>[
         Text(
           login ?"Don't have an Account ?": "Already have an Account ? ",
-          style: TextStyle(color: Colors.purple),
+          style: TextStyle(color: Colors.black),
         ),
         Padding(
           padding: EdgeInsets.symmetric(vertical: 25),
@@ -25,7 +25,7 @@ class AlreadyHaveAnAccountCheck extends StatelessWidget {
           onTap: press,
           child: Text(
             login?"Sign Up" : "Sign In",
-            style: TextStyle(color: Colors.purple, fontWeight: FontWeight.bold),
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
         )
       ],

@@ -35,14 +35,14 @@ class _BodyState extends State<Body> {
               style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
-                  color: Colors.purple),
+                  color: Colors.black),
             ),
             Positioned(
               bottom: 0,
               left: 0,
-              child: Image.asset(
-                "assets/images/signup-page.png",
-                width: size.width * 0.6,
+              child: SvgPicture.asset(
+                "assets/icons/signup-page.svg",
+                width: size.width * 0.5,
               ),
             ),
             RoundedInputField(

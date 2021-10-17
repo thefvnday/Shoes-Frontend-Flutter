@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:sepasang/Screens/Home/home_screen.dart';
 import 'package:sepasang/Screens/Login/components/background.dart';
 import 'package:sepasang/Screens/Signup/components/social_icon.dart';
@@ -24,17 +25,17 @@ class _BodyState extends State<Body> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           Text(
-            "LOGIN",
+            "SIGN IN",
             style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
-                color: Colors.purple),
+                color: Colors.black),
           ),
           Positioned(
             bottom: 0,
             left: 0,
-            child: Image.asset(
-              "assets/images/login-page.png",
+            child: SvgPicture.asset(
+              "assets/icons/wave-login-page.svg",
               width: size.width * 0.5,
             ),
           ),
@@ -52,7 +53,7 @@ class _BodyState extends State<Body> {
             onChanged: (value) {},
           ),
           RoundedButton(
-            text: "LOGIN",
+            text: "SIGN IN",
             press: () {
               Navigator.push(
                 context,

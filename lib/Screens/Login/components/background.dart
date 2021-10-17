@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 
 class Background extends StatelessWidget {
@@ -19,11 +20,11 @@ class Background extends StatelessWidget {
         alignment: Alignment.center,
         children: <Widget>[
           Positioned(
-            top: 0,
+            bottom: -0.7,
             left: 0,
-            child: Image.asset(
-              "assets/images/main_top.png",
-              width: size.width * 0.35,
+            child: SvgPicture.asset(
+              "assets/icons/blob-bottom-login.svg",
+              width: size.width * 1.7,
             ),
           ),
           // Positioned(
