@@ -65,6 +65,7 @@ class _BodyState extends State<Body> {
               );
             },
           ),
+          
           AlreadyHaveAnAccountCheck(
             press: () {
               Navigator.push(

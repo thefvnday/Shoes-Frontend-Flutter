@@ -20,7 +20,7 @@ class Body extends StatelessWidget {
           SizedBox(height:10),
           CarouselSlider(
             options: CarouselOptions(
-              height: 190.0,
+              height: 165.0,
               enlargeCenterPage: true,
               autoPlay: true,
               aspectRatio: 16/9,

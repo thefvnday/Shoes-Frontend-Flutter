@@ -41,6 +41,7 @@ class Body extends StatelessWidget {
                   width: size.width * 0.7,
                 ),
               ),
+              SizedBox(height: 20,),
               RoundedButton(
                 text: "SIGN IN",
                 press: () {
